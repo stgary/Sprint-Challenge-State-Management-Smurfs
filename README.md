@@ -23,10 +23,28 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+      The Context API is a component structure provided by the React framework, which enables us to share specific forms of data across all levels of the application. It's aimed at solving the problem of prop drilling.
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+        Actions: The only way to change the state is to emit an action, an object describing what happened.
+        Reducers: Reducers are just pure functions that take the previous state and an action, and return the next state. 
+        Store: The global state of your application is stored in an object tree within a single store.
+
+        its called the single source of truth because everything is in one place.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+        Your application state is global, and your component state is local. If you have shared data in multiple components that are spread out then you would want to use application state. If you only need the state in one component then use component state. 
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+        Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object. That function receives the store's dispatch method, which is then used to dispatch regular synchronous actions inside the body of the function once the asynchronous operations have completed
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+        Context API because it is simple and makes more sense with the small projects we do at lambda.
 
 ## Project Set Up
 
